@@ -1,0 +1,31 @@
+<%= form_for @banquet do |f| %>
+  <% if @banquet.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@banquet.errors.count, "error") %> prohibited
+      this banquet from being saved:</h2>
+    <ul>
+    <% @banquet.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

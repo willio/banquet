@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @banquet.name %>
+</p>
+ 
+<p>
+  <strong>Date:</strong>
+  <%= @banquet.date %>
+</p> 
+
+<p>
+  <strong>Status:</strong>
+  <%= @banquet.status %>
+</p>
+
+<%= link_to 'Back', banquets_path %>
+| <%= link_to 'Edit', edit_banquets_path(@banquet) %>
