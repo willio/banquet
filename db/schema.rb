@@ -11,9 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20141007062218) do
 
   create_table "banquets", force: true do |t|
+=======
+ActiveRecord::Schema.define(version: 20141007070717) do
+
+  create_table "customers", force: true do |t|
+>>>>>>> 4ecb144431ae78ee3c3654b43f6d19216a9857d8
     t.string "name"
     t.string "date"
     t.string "status"
