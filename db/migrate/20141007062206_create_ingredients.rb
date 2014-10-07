@@ -4,8 +4,7 @@ class CreateIngredients < ActiveRecord::Migration
 			t.string :name
 			t.float :price
 			t.integer :item_id
-
-			t.timestamp
-		end
-	end
+  		t.timestamp
+  	end
+  end
 end
