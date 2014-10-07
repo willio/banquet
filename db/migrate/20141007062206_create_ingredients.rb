@@ -6,5 +6,6 @@ class CreateIngredients < ActiveRecord::Migration
   		t.integer :item_id
 
   		t.timestamp
+  	end
   end
 end
