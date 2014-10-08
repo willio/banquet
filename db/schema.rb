@@ -11,6 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> FETCH_HEAD
 ActiveRecord::Schema.define(version: 20141007070717) do
 
   create_table "customers", force: true do |t|
@@ -27,7 +31,7 @@ ActiveRecord::Schema.define(version: 20141007070717) do
 
   create_table "items", force: true do |t|
     t.string  "name"
-    t.integer "banquet_id"
+    t.integer "customer_id"
   end
 
 end
