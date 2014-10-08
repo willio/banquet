@@ -50,8 +50,12 @@ GEM
     json (1.8.1)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
+<<<<<<< HEAD
     method_source (0.8.2)
     mime-types (2.4)
+=======
+    mime-types (2.3)
+>>>>>>> 0c96298a1f5f94abb02d2623fff0083806506891
     minitest (5.4.2)
     multi_json (1.10.1)
     pry (0.10.1)

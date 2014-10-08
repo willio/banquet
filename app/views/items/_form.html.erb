@@ -1,4 +1,5 @@
 <%= form_for @item do |f| %>
+<<<<<<< HEAD
   <% if @item.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@item.errors.count, "error") %> prohibited
@@ -23,4 +24,8 @@
   <p>
     <%= f.submit %>
   </p>
+=======
+  <%= f.text_field :name %>
+  <%= f.submit %>
+>>>>>>> 0c96298a1f5f94abb02d2623fff0083806506891
 <% end %>

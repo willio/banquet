@@ -12,9 +12,14 @@
  
   <% @items.each do |item| %>
     <tr>
+
       <td><%= item.id %></td>
       <td><%= item.name %></td>
       <td><%= item.customer_id %></td>
+
+      <td><%#= item.title %></td>
+      <td><%#= item.link.html_safe %> </td>
+
       <td><%= link_to 'Show', item_path(item) %></td>
       <td><%= link_to 'Edit', edit_item_path(item) %></td>
       <td><%= link_to 'Destroy', item_path(item), method: :delete, data: { confirm: 'Sure?' } %></td>
