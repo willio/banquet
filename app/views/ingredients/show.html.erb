@@ -1,1 +1,17 @@
-<h1> ingredient show page bitcehs </hi>
+<p>
+  <strong>Name:</strong>
+  <%= @ingredient.name %>
+</p>
+ 
+<p>
+  <strong>Price:</strong>
+  <%= @ingredient.price %>
+</p> 
+
+<p>
+  <strong>Item ID:</strong>
+  <%= @ingredient.item_id %>
+</p>
+
+<%= link_to 'Back', ingredients_path %>
+| <%= link_to 'Edit', edit_ingredient_path(@ingredient) %>

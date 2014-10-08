@@ -4,14 +4,9 @@
 </p>
  
 <p>
-  <strong>Date:</strong>
-  <%= @item.date %>
+  <strong>Customer:</strong>
+  <%= @item.customer_id %>
 </p> 
 
-<p>
-  <strong>Status:</strong>
-  <%= @item.status %>
-</p>
-
-<%= link_to 'Back', item %>
+<%= link_to 'Back', items_path %>
 | <%= link_to 'Edit', edit_item_path(@item) %>

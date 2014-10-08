@@ -1,1 +1,26 @@
-<h1> sup bitches, ingredient index </h1> 
+<h1>Listing Ingredients</h1>
+ 
+<%= link_to 'New ingredient', new_ingredient_path %> | <%= link_to 'Items', items_path %> | <%= link_to 'Customers', customers_path %><br><br>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Item ID</th>
+    <th colspan="4"></th>
+  </tr>
+ 
+  <% @ingredients.each do |ingredient| %>
+    <tr>
+      <td><%= ingredient.item_id %> </td>
+      <td><%= ingredient.name %></td>
+      <td><%= ingredient.price %> </td>
+      <td><%= ingredient.item_id %> </td>
+      <td><%= link_to 'Show', ingredient_path(ingredient) %></td>
+      <td><%= link_to 'Edit', edit_ingredient_path(ingredient) %></td>
+      <td><%= link_to 'Destroy', ingredient_path(ingredient), method: :delete, data: { confirm: 'Sure?' } %></td>
+    </tr>
+  <% end %>
+
+</table>

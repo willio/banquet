@@ -1,6 +1,6 @@
-class IngredientController < ApplicationController
+class IngredientsController < ApplicationController
 
-def index
+	def index
 		@ingredients = Ingredient.all
 	end
 
@@ -9,7 +9,7 @@ def index
 	end
 
 	def create
-		@ingredient = Ingredient.new(ingredient_params)
+		@ingredient = Ingredient.new(item_params)
 
 		if @ingredient.save
 			redirect_to @ingredient
@@ -29,7 +29,7 @@ def index
 	def update
 		@ingredient = Ingredient.find(params[:id])
 
-		if @ingredient.update(ingredient_params)
+		if @ingredient.update(item_params)
 			redirect_to @ingredient
 		else
 			render 'edit'
@@ -40,11 +40,11 @@ def index
 		@ingredient = Ingredient.find(params[:id])
 		@ingredient.destroy
 
-		redirect_to ingredients_path
+		redirect_to items_path
 	end
 
 	private
-	def ingredient_params
-		params.require(:ingredient).permit(:title, :link)
+	def item_params
+		params.require(:ingredient).permit(:name, :price)
 	end
 end

@@ -1,10 +1,10 @@
-<%= form_for @ingredients do |f| %>
-  <% if @ingredients.errors.any? %>
+<%= form_for @ingredient do |f| %>
+  <% if @ingredient.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@ingredients.errors.count, "error") %> prohibited
-      this ingredients from being saved:</h2>
+    <h2><%= pluralize(@ingredient.errors.count, "error") %> prohibited
+      this ingredient from being saved:</h2>
     <ul>
-    <% @ingredients.errors.full_messages.each do |msg| %>
+    <% @ingredient.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>
@@ -16,13 +16,13 @@
   </p>
  
   <p>
-    <%= f.label :date %><br>
-    <%= f.text_field :date %>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
   </p>
 
   <p>
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.label :item_id %><br>
+    <%= f.text_field :item_id %>
   </p>
  
   <p>
