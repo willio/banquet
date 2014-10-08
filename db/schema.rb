@@ -19,15 +19,4 @@ ActiveRecord::Schema.define(version: 20141007070717) do
     t.string "status"
   end
 
-  create_table "ingredients", force: true do |t|
-    t.string  "name"
-    t.float   "price"
-    t.integer "item_id"
-  end
-
-  create_table "items", force: true do |t|
-    t.string  "name"
-    t.integer "customer_id"
-  end
-
 end
