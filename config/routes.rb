@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :items
+  
   resources :ingredients
   resources :customers
 

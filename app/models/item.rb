@@ -13,7 +13,7 @@ def name
 end
 
 
-def banquet_id
+def customer_id
 	
 end
 
