@@ -8,14 +8,16 @@
     <th>Name</th>
     <th>Price</th>
     <th>Item ID</th>
-    <th colspan="4"></th>
+    <th colspan="5"></th>
   </tr>
  
   <% @ingredients.each do |ingredient| %>
     <tr>
-      <td><%= ingredient.item_id %> </td>
+      <td><%= ingredient.id %> </td>
       <td><%= ingredient.name %></td>
       <td><%= ingredient.price %> </td>
+      
+      <!-- Can also do ingredient.item.name -->
       <td><%= ingredient.item_id %> </td>
       <td><%= link_to 'Show', ingredient_path(ingredient) %></td>
       <td><%= link_to 'Edit', edit_ingredient_path(ingredient) %></td>

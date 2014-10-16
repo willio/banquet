@@ -24,11 +24,14 @@ class IngredientsController < ApplicationController
 
 	def edit
 		@ingredient = Ingredient.find(params[:id])
+		# Ingredient.find(params[:ing_id])
+		# i = Item.find(item_id)
+		# i.ingredients.push(ingredient)
 	end
 
 	def update
 		@ingredient = Ingredient.find(params[:id])
-
+		@ingredient.update_attributes(ingredients_params)
 		if @ingredient.update(item_params)
 			redirect_to @ingredient
 		else
@@ -45,6 +48,6 @@ class IngredientsController < ApplicationController
 
 	private
 	def item_params
-		params.require(:ingredient).permit(:name, :price)
+		params.require(:ingredient).permit(:id, :name, :price, :item_id)
 	end
 end

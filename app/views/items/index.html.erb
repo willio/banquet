@@ -6,7 +6,7 @@
   <tr>
     <th>Item ID</th>
     <th>Name</th>
-    <th>Customer ID</th>
+    <th>Customer</th>
     <th colspan="3"></th>
   </tr>
  
@@ -15,7 +15,7 @@
 
       <td><%= item.id %></td>
       <td><%= item.name %></td>
-      <td><%= item.customer_id %></td>
+      <td><%= item.customer.name %> (id: <%= item.customer_id %>)</td>
 
       <td><%#= item.title %></td>
       <td><%#= item.link.html_safe %> </td>

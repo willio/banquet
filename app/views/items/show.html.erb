@@ -2,10 +2,14 @@
   <strong>Name:</strong>
   <%= @item.name %>
 </p>
- 
+ <strong>Ingredients</strong>
+  <% @item.ingredients.each do |ing| %>
+  <%= ing.name %>
+  <% end %>
 <p>
-  <strong>Customer:</strong>
-  <%= @item.customer_id %>
+  <strong>Order <%= @item.customer_id %> by Customer:</strong>
+  <%= @item.customer.name %>
+  
 </p> 
 
 <%= link_to 'Back', items_path %>
